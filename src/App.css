@@ -1,0 +1,198 @@
+.app-shell {
+  min-height: 100vh;
+  padding: 28px 0 40px;
+  background: transparent;
+}
+
+.app-content,
+.full-width {
+  width: 100%;
+}
+
+.hero-card,
+.page-card,
+.stat-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 18px 48px rgba(22, 37, 64, 0.08);
+}
+
+.hero-card .ant-card-body,
+.page-card .ant-card-body {
+  padding: 28px;
+}
+
+.hero-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.7fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.hero-copy .ant-typography {
+  margin-bottom: 0;
+}
+
+.hero-actions {
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(245, 250, 255, 0.92), rgba(237, 244, 251, 0.88));
+  border: 1px solid rgba(31, 120, 180, 0.14);
+}
+
+.eyebrow,
+.panel-kicker {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #1f78b4;
+}
+
+.route-nav-card .ant-card-body {
+  padding: 18px;
+}
+
+.route-nav-card {
+  margin: 10px 0 12px;
+}
+
+.route-nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.route-button {
+  height: auto;
+  min-height: 84px;
+  padding: 14px 16px;
+  text-align: left;
+  border-radius: 18px;
+}
+
+.route-button.is-active {
+  box-shadow: 0 12px 28px rgba(31, 120, 180, 0.18);
+}
+
+.route-button__label {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.route-button__hint {
+  font-size: 13px;
+  line-height: 1.35;
+  opacity: 0.78;
+  white-space: normal;
+}
+
+.page-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.page-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: 20px;
+}
+
+.directory-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.panel-header .ant-typography {
+  margin-bottom: 0;
+}
+
+.page-muted {
+  color: #5b6877;
+}
+
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.scenario-button {
+  height: auto;
+  min-height: 108px;
+  padding: 16px;
+  text-align: left;
+}
+
+.scenario-button .ant-typography {
+  white-space: normal;
+}
+
+.nested-card {
+  border: 1px solid rgba(24, 43, 71, 0.08);
+  background: rgba(248, 251, 255, 0.74);
+}
+
+.nested-card--selected {
+  border-color: rgba(31, 120, 180, 0.42);
+  box-shadow: inset 0 0 0 1px rgba(31, 120, 180, 0.2);
+}
+
+.alternative-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.alert-list {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.alert-list li + li {
+  margin-top: 4px;
+}
+
+.stat-card .ant-statistic {
+  text-align: center;
+}
+
+.ant-table-wrapper .ant-table-thead > tr > th {
+  white-space: nowrap;
+}
+
+@media (max-width: 1180px) {
+  .hero-panel,
+  .page-grid,
+  .directory-grid,
+  .route-nav,
+  .scenario-grid,
+  .alternative-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-shell {
+    padding: 16px 0 28px;
+  }
+
+  .hero-card .ant-card-body,
+  .page-card .ant-card-body {
+    padding: 20px;
+  }
+
+  .panel-header {
+    flex-direction: column;
+  }
+}
